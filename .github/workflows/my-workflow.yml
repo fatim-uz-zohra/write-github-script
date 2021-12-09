@@ -18,4 +18,12 @@ jobs:
               repo: context.repo.repo,
               body: "🎉 You've created this issue comment using GitHub Script!!!"
             })
+            
+            github.projects.createCard({
+            column_id: 17165313,
+            content_id: context.payload.issue.id,
+            content_type: "Issue"
+            });
+
 # Workflow files are the recipe for task automation. This is where actions are placed if I want to use them for a task.
+
